@@ -1,0 +1,18 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc_local:
+    ~/.config/fish/config.fish:
+    ~/.config/starship.toml:
+    ~/.gitconfig:
+    ~/.tmux.conf: .tmux/.tmux.conf
+    ~/.tmux.conf.local:
+    ~/.vimrc:
+
+- shell:
+    - git submodule update --init --recursive
