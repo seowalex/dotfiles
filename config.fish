@@ -21,6 +21,12 @@ set -gx PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
 
 set -gx PATH $HOME/bin $PATH
 
+set -g FZF_DEFAULT_OPTS '--height 40% --reverse'
+set -g FZF_COMPLETE 0
+set -g FZF_LEGACY_KEYBINDINGS 0
+
+set -g fish_greeting
+
 set -g fish_color_autosuggestion      brblack
 set -g fish_color_cancel              -r
 set -g fish_color_command             blue
