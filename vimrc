@@ -16,6 +16,17 @@ let g:PaperColor_Theme_Options = {
   \     'default.dark': {
   \       'transparent_background': 1
   \     }
+  \   },
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins': 1
+  \     },
+  \     'cpp': {
+  \       'highlight_standard_library': 1
+  \     },
+  \     'c': {
+  \       'highlight_builtins': 1
+  \     }
   \   }
   \ }
 let g:lightline = { 'colorscheme': 'PaperColor' }
@@ -24,6 +35,8 @@ colorscheme PaperColor
 syntax enable
 filetype indent on
 filetype plugin on
+
+set mouse=a
 
 set expandtab
 set tabstop=4
