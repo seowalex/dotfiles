@@ -6,6 +6,8 @@ Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-slash'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -63,3 +65,24 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+set noerrorbells
+set novisualbell
+set t_vb=
+
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+nnoremap <expr> n 'Nn'[v:searchforward]
+xnoremap <expr> n 'Nn'[v:searchforward]
+onoremap <expr> n 'Nn'[v:searchforward]
+
+nnoremap <expr> N 'nN'[v:searchforward]
+xnoremap <expr> N 'nN'[v:searchforward]
+onoremap <expr> N 'nN'[v:searchforward]
+
+nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
+nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
+
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
