@@ -11,6 +11,8 @@ set -gx EDITOR vim
 
 set -gx LS_COLORS $LS_COLORS'ow=01;34:'
 
+set -gx BD_OPT 'insensitive'
+
 bass source /usr/share/gazebo-9/setup.sh
 bass source /opt/ros/melodic/setup.bash
 bass source $HOME/hornet/devel/setup.bash
