@@ -81,8 +81,8 @@ nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 nnoremap <expr> <Up> (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> <Down> (v:count == 0 ? 'gj' : 'j')
-inoremap <expr> <Up> (v:count == 0 ? '<c-o>gk' : 'k')
-inoremap <expr> <Down> (v:count == 0 ? '<c-o>gj' : 'j')
+inoremap <expr> <Up> '<c-o>gk'
+inoremap <expr> <Down> '<c-o>gj'
 
 nnoremap <expr> n 'Nn'[v:searchforward]
 xnoremap <expr> n 'Nn'[v:searchforward]
