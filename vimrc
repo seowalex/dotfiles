@@ -39,8 +39,23 @@ filetype indent on
 filetype plugin on
 
 set mouse=a
+set ruler
+set backspace=indent,eol,start
+set lazyredraw
+set showmatch
+:autocmd InsertEnter,InsertLeave * set cul!
+
+set linebreak
+set showbreak=+++
+set number
+
+set showcmd
+set wildmenu
+set laststatus=2
+set noshowmode
 
 set expandtab
+set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -49,17 +64,6 @@ set smartindent
 
 set splitbelow
 set splitright
-
-set linebreak
-set showbreak=+++
-set number
-set showcmd
-set wildmenu
-set lazyredraw
-set showmatch
-set laststatus=2
-set noshowmode
-:autocmd InsertEnter,InsertLeave * set cul!
 
 set incsearch
 set hlsearch
@@ -72,6 +76,13 @@ set t_vb=
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> <Up> (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> <Down> (v:count == 0 ? 'gj' : 'j')
+inoremap <expr> <Up> (v:count == 0 ? '<c-o>gk' : 'k')
+inoremap <expr> <Down> (v:count == 0 ? '<c-o>gj' : 'j')
 
 nnoremap <expr> n 'Nn'[v:searchforward]
 xnoremap <expr> n 'Nn'[v:searchforward]
