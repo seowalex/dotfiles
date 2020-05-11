@@ -4,6 +4,7 @@ and not set -q TMUX
 end
 
 alias open explorer.exe
+alias nodejs node
 
 set -gx DISPLAY :0.0
 set -gx LIBGL_ALWAYS_INDIRECT 0
@@ -13,19 +14,23 @@ set -gx LS_COLORS $LS_COLORS'ow=01;34:'
 
 set -gx BD_OPT 'insensitive'
 
-bass source /usr/share/gazebo-9/setup.sh
-bass source /opt/ros/melodic/setup.bash
-bass source $HOME/hornet/devel/setup.bash
-
-set -gx PATH $HOME/.rbenv/bin $PATH
-status --is-interactive; and source (rbenv init -|psub)
-set -gx PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
-
-set -gx PATH $HOME/bin $PATH
-
 set -g FZF_DEFAULT_OPTS '--height 40% --reverse'
 set -g FZF_COMPLETE 0
 set -g FZF_LEGACY_KEYBINDINGS 0
+
+starship init fish | source
+
+bass source /usr/share/gazebo-9/setup.sh
+bass source /opt/ros/melodic/setup.bash
+bass source $HOME/bumblebee/hornet/devel/setup.bash
+
+set -gx PATH $HOME/.nodenv/bin $PATH
+status --is-interactive; and nodenv init - | source
+
+set -gx PATH $HOME/.rbenv/bin $PATH
+status --is-interactive; and rbenv init - | source
+
+set -gx PATH $HOME/bin $PATH
 
 set -g fish_greeting
 
@@ -56,5 +61,3 @@ set -g fish_pager_color_completion    normal
 set -g fish_pager_color_description   yellow
 set -g fish_pager_color_prefix        white --bold --underline
 set -g fish_pager_color_progress      brwhite --background=cyan
-
-starship init fish | source
