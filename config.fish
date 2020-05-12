@@ -32,6 +32,8 @@ status --is-interactive; and rbenv init - | source
 
 set -gx PATH $HOME/bin $PATH
 
+eval /home/seowalex/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+
 set -g fish_greeting
 
 set -g fish_color_autosuggestion      brblack
