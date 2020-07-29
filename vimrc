@@ -1,10 +1,11 @@
+source /usr/share/doc/fzf/examples/fzf.vim
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
-Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-slash'
 Plug 'preservim/nerdtree'

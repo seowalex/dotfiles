@@ -1,15 +1,12 @@
-if status is-interactive
-and not set -q TMUX
-    tmux attach -t wsl; or tmux new -s wsl
-end
+# Disabled until https://github.com/mintty/wsltty/issues/197 is fixed
+# if status is-interactive
+# and not set -q TMUX
+#     tmux attach -t wsl; or tmux new -s wsl
+# end
 
 alias open explorer.exe
-alias nodejs node
 
-set -gx DISPLAY :0.0
-set -gx LIBGL_ALWAYS_INDIRECT 0
 set -gx EDITOR vim
-
 set -gx LS_COLORS $LS_COLORS'ow=01;34:'
 
 set -gx BD_OPT 'insensitive'
@@ -20,17 +17,11 @@ set -g FZF_LEGACY_KEYBINDINGS 0
 
 starship init fish | source
 
-bass source /usr/share/gazebo-9/setup.sh
-bass source /opt/ros/melodic/setup.bash
-bass source $HOME/bumblebee/hornet/devel/setup.bash
-
 set -gx PATH $HOME/.nodenv/bin $PATH
 status --is-interactive; and nodenv init - | source
 
 set -gx PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and rbenv init - | source
-
-set -gx PATH $HOME/bin $PATH
 
 eval /home/seowalex/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 
