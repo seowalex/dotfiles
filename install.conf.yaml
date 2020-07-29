@@ -6,7 +6,6 @@
 - clean: ['~']
 
 - link:
-    ~/.bashrc_local:
     ~/.condarc:
     ~/.config/fish/config.fish:
     ~/.config/starship.toml:
