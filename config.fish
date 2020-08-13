@@ -1,8 +1,9 @@
-# Disabled until https://github.com/mintty/wsltty/issues/197 is fixed
-# if status is-interactive
-# and not set -q TMUX
-#     tmux attach -t wsl; or tmux new -s wsl
-# end
+if status is-interactive
+and not set -q TMUX
+    # Workaround for https://github.com/mintty/wsltty/issues/197
+    pkill -t pts/0
+    tmux attach -t wsl; or tmux new -s wsl
+end
 
 alias open explorer.exe
 
