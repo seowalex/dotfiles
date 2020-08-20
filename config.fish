@@ -1,6 +1,6 @@
 # Uses Git for Windows when on Windows filesystem
 function __git --on-variable PWD
-    if string match -q -- "/mnt/c*" (pwd)
+    if string match -q -- '/mnt/c*' (pwd)
         alias git git.exe
     else
         functions -e git
@@ -9,7 +9,7 @@ end
 
 if status is-interactive
     and not set -q TMUX
-    and not string match -q "vscode" $TERM_PROGRAM
+    and not string match -q 'vscode' $TERM_PROGRAM
     # Workaround for https://github.com/mintty/wsltty/issues/197
     pkill -t pts/0
     tmux attach -t wsl; or tmux new -s wsl
@@ -18,15 +18,15 @@ end
 __git
 alias open explorer.exe
 
-set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk "{print $2}"):0.0
+set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 set -gx LIBGL_ALWAYS_INDIRECT 0
 
 set -gx EDITOR vim
-set -gx LS_COLORS $LS_COLORS"ow=01;34:"
+set -gx LS_COLORS $LS_COLORS'ow=01;34:'
 
-set -gx BD_OPT "insensitive"
+set -gx BD_OPT 'insensitive'
 
-set -g FZF_DEFAULT_OPTS "--height 40% --reverse"
+set -g FZF_DEFAULT_OPTS '--height 40% --reverse'
 set -g FZF_COMPLETE 0
 set -g FZF_LEGACY_KEYBINDINGS 0
 
@@ -38,7 +38,7 @@ status --is-interactive; and nodenv init - | source
 set -gx PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and rbenv init - | source
 
-eval /home/seowalex/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /home/seowalex/miniconda3/bin/conda 'shell.fish' 'hook' $argv | source
 
 set -g fish_greeting
 
