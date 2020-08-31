@@ -32,6 +32,8 @@ set -g FZF_LEGACY_KEYBINDINGS 0
 
 starship init fish | source
 
+set -gx PATH /opt/gradle/gradle-6.6.1/bin $PATH
+
 set -gx PATH $HOME/.nodenv/bin $PATH
 status --is-interactive; and nodenv init - | source
 
