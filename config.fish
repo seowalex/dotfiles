@@ -1,12 +1,3 @@
-# Uses Git for Windows when on Windows filesystem
-function __git --on-variable PWD
-    if string match -q -- '/mnt/c*' (pwd)
-        alias git git.exe
-    else
-        functions -e git
-    end
-end
-
 # Workaround for https://github.com/mintty/wsltty/issues/197
 if set -q WSL_DISTRO_NAME
     command -v cmd.exe > /dev/null; or exit
@@ -18,7 +9,6 @@ if status is-interactive
     tmux attach -t wsl; or tmux new -s wsl
 end
 
-__git
 alias open explorer.exe
 
 set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
