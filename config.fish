@@ -1,8 +1,3 @@
-# Workaround for https://github.com/mintty/wsltty/issues/197
-if set -q WSL_DISTRO_NAME
-    command -v cmd.exe > /dev/null; or exit
-end
-
 if status is-interactive
     and not set -q TMUX
     and not string match -q 'vscode' $TERM_PROGRAM
