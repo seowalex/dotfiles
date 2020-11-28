@@ -15,4 +15,5 @@
     ~/.vimrc:
 
 - shell:
-    - git submodule update --init --recursive
+    - git submodule update --init --remote --recursive
+    - fzf/install --no-key-bindings --no-completion --no-update-rc --no-bash --no-zsh
