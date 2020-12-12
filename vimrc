@@ -15,7 +15,7 @@ set t_Co=256
 set background=dark
 let g:PaperColor_Theme_Options = {
   \   'theme': {
-  \     'default.dark': {
+  \     'default': {
   \       'transparent_background': 1
   \     }
   \   },
