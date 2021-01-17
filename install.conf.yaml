@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - shell:
+    - sudo apt update && sudo apt install -y fish git tmux vim
     - git submodule update --init --remote --recursive
 
 - link:
