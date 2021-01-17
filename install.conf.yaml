@@ -5,6 +5,9 @@
 
 - clean: ['~']
 
+- shell:
+    - git submodule update --init --remote --recursive
+
 - link:
     ~/.config/fish/config.fish:
     ~/.config/starship.toml:
@@ -15,5 +18,4 @@
     ~/.vimrc:
 
 - shell:
-    - git submodule update --init --remote --recursive
     - fzf/install --no-key-bindings --no-completion --no-update-rc --no-bash --no-zsh
