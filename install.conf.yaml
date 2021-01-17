@@ -26,9 +26,13 @@
         if: string match -q -e 'Ubuntu 20.04' (lsb_release -ds)
         path: ubuntu/20.04/config.fish
     ~/.config/fish/config.fish:
+    ~/.config/fish/fish_plugins:
     ~/.config/starship.toml:
     ~/.condarc:
     ~/.gitconfig:
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local:
     ~/.vimrc:
+
+- shell:
+    - curl -sL https://git.io/fisher | source && fisher update
