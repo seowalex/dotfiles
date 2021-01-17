@@ -340,7 +340,7 @@ bind C-a send-prefix
 #set -g status-position top
 
 # set default shell to fish
-set-option -g default-shell /usr/bin/fish
+set-option -g default-shell $SHELL
 
 # bindings for shifting windows
 bind-key -n C-S-Left swap-window -t -1 \; select-window -t -1
