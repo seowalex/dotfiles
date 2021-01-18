@@ -346,12 +346,6 @@ set-option -g default-shell $SHELL
 bind-key -n C-S-Left swap-window -t -1 \; select-window -t -1
 bind-key -n C-S-Right swap-window -t +1 \; select-window -t +1
 
-if-shell "test (string match -r '[\d\.]+' (string split ' ' (tmux -V))[2]) -lt 3" "\
-  unbind-key -n C-S-Left; \
-  unbind-key -n C-S-Right; \
-  bind-key -n C-S-Left swap-window -t -1; \
-  bind-key -n C-S-Right swap-window -t +1"
-
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
 # '# EOF' and the '# "$@"' lines. Please note that the opening brace { character
