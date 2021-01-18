@@ -347,8 +347,8 @@ bind-key -n C-S-Left swap-window -t -1
 bind-key -n C-S-Right swap-window -t +1
 
 if-shell "[ $(tmux -V | awk -F '[ .]' '{print $2}')  -ge 3 ]" "\
-  bind-key -n C-S-Left select-window -t -1; \
-  bind-key -n C-S-Right select-window -t +1"
+  bind-key -n C-S-Left swap-window -t -1 \\\; select-window -t -1; \
+  bind-key -n C-S-Right swap-window -t +1 \\\; select-window -t +1"
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
