@@ -10,6 +10,8 @@ set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 set -gx LIBGL_ALWAYS_INDIRECT 0
 set -gx LS_COLORS $LS_COLORS'ow=01;34:'
 
+set -gx PATH /usr/local/go/bin $PATH
+
 set -gx PATH $HOME/.cargo/bin $PATH
 set -gx PATH /opt/gradle/gradle-6.6.1/bin $PATH
 
