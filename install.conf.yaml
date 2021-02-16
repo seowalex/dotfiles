@@ -9,7 +9,7 @@
         recursive: true
 
 - shell:
-    - sudo apt update && sudo apt install -y fish git tmux vim
+    - sudo apt update && sudo apt install -y fish tmux vim
     - chsh -s $(which fish)
     - curl -fsSL https://starship.rs/install.sh | bash -s -- -y
     - git submodule update --init --remote --recursive
