@@ -22,7 +22,6 @@ set -g fish_color_escape              brcyan
 set -g fish_color_history_current     --bold
 set -g fish_color_host                normal
 set -g fish_color_host_remote         yellow
-set -g fish_color_match               --background=brblue
 set -g fish_color_normal              normal
 set -g fish_color_operator            cyan
 set -g fish_color_param               brblue
