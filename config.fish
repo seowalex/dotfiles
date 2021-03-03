@@ -2,10 +2,6 @@ set -gx EDITOR vim
 
 set -gx BD_OPT 'insensitive'
 
-set -g FZF_DEFAULT_OPTS '--height 40% --reverse'
-set -g FZF_COMPLETE 0
-set -g FZF_LEGACY_KEYBINDINGS 0
-
 starship init fish | source
 
 set -g fish_greeting
