@@ -63,13 +63,7 @@ set wildmenu
 set laststatus=2
 set noshowmode
 
-set expandtab
-set smarttab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set autoindent
-set smartindent
 
 set splitbelow
 set splitright
