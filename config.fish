@@ -1,6 +1,7 @@
 set -gx EDITOR vim
 
 set -gx BD_OPT 'insensitive'
+set -gx fzf_history_opts '--with-nth=4..'
 
 starship init fish | source
 
