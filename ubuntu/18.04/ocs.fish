@@ -23,7 +23,11 @@ function ocs -a toggle vehicle
                    return 1
            end
         case '*'
-            'Only "ocs on" or "ocs off" can be specified'
+            echo 'Only "ocs on" or "ocs off" can be specified'
             return 1
+    end
+
+    if set -q TMUX
+        tmux setenv ROS_MASTER_URI $ROS_MASTER_URI
     end
 end
