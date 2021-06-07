@@ -32,6 +32,8 @@
     ~/.config/fish/config.fish:
     ~/.config/fish/fish_plugins:
     ~/.config/starship.toml:
+    ~/.nodenv/version:
+        create: false 
     ~/.vim/after/ftplugin/markdown.vim:
     ~/.vim/after/ftplugin/tex.vim:
     ~/.condarc:
