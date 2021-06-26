@@ -3,8 +3,9 @@
 [user]
 	name = Seow Alex
 	email = seowalex@hotmail.com
-[core]
 [pull]
 	ff = only
 [push]
 	followTags = true
+[submodule]
+	recurse = true
