@@ -1,10 +1,12 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
 [submodule ".tmux"]
 	path = .tmux
-	url = https://github.com/gpakosz/.tmux.git
+	url = git@github.com:gpakosz/.tmux.git
+	branch = master
+[submodule "dotbot"]
+	path = dotbot
+	url = git@github.com:anishathalye/dotbot.git
+	branch = master
 [submodule "fzf"]
 	path = fzf
-	url = https://github.com/junegunn/fzf.git
+	url = git@github.com:junegunn/fzf.git
+	branch = master
