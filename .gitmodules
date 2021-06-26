@@ -1,12 +1,9 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = git@github.com:gpakosz/.tmux.git
-	update = rebase
 [submodule "dotbot"]
 	path = dotbot
 	url = git@github.com:anishathalye/dotbot.git
-	update = rebase
 [submodule "fzf"]
 	path = fzf
 	url = git@github.com:junegunn/fzf.git
-	update = rebase
