@@ -34,4 +34,4 @@ set -gx fzf_history_opts '--with-nth=4..'
 
 starship init fish | source
 
-sudo service docker status; or sudo service docker start
+service docker status > /dev/null 2>&1; or sudo service docker start > /dev/null 2>&1
