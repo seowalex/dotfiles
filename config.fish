@@ -1,10 +1,3 @@
-set -gx EDITOR vim
-
-set -gx BD_OPT 'insensitive'
-set -gx fzf_history_opts '--with-nth=4..'
-
-starship init fish | source
-
 set -g fish_greeting
 
 set -g fish_color_autosuggestion      brblack
@@ -33,3 +26,12 @@ set -g fish_pager_color_completion    normal
 set -g fish_pager_color_description   yellow
 set -g fish_pager_color_prefix        white --bold --underline
 set -g fish_pager_color_progress      brwhite --background=cyan
+
+set -gx EDITOR vim
+
+set -gx BD_OPT 'insensitive'
+set -gx fzf_history_opts '--with-nth=4..'
+
+starship init fish | source
+
+sudo service docker start
