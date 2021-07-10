@@ -16,9 +16,6 @@
     - fzf/install --no-key-bindings --no-completion --no-update-rc --no-bash --no-zsh
 
 - link:
-    ~/.config/fish/conf.d/config-macos-10.15.fish:
-        if: string match -q -e '10.15' (sw_vers -productVersion)
-        path: macos/10.15/config.fish
     ~/.config/fish/conf.d/config-ubuntu-18.04.fish:
         if: set -q WSL_DISTRO_NAME; and string match -q -e 'Ubuntu 18.04' (lsb_release -ds)
         path: ubuntu/18.04/config.fish
