@@ -1,7 +1,7 @@
 if status is-interactive
     and not set -q TMUX
     and not string match -q 'vscode' $TERM_PROGRAM
-    tmux attach -t wsl; or tmux new -s focal
+    tmux attach -t focal; or tmux new -s focal
 end
 
 alias open explorer.exe

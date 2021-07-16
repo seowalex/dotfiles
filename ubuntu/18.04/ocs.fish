@@ -10,7 +10,7 @@ function ocs -a toggle vehicle
                 usage
                 return 1
             end
-            set ROS_MASTER_URI http://localhost:11311
+            set -x ROS_MASTER_URI http://localhost:11311
         case on
             if test (count $argv) -gt 2
                 usage
@@ -19,9 +19,9 @@ function ocs -a toggle vehicle
 
             switch $vehicle
                 case auv3
-                    set ROS_MASTER_URI http://192.168.1.130:11311
+                    set -x ROS_MASTER_URI http://192.168.1.130:11311
                 case auv4
-                    set ROS_MASTER_URI http://192.168.1.150:11311
+                    set -x ROS_MASTER_URI http://192.168.1.150:11311
                 case '*'
                     usage
                     return 1
