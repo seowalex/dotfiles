@@ -4,12 +4,6 @@ if status is-interactive
     tmux attach -t focal; or tmux new -s focal
 end
 
-alias open explorer.exe
-
-set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
-set -gx LIBGL_ALWAYS_INDIRECT 0
-set -gx LS_COLORS (string trim -c \' (dircolors -c | string split ' ')[3])'ow=01;34:'
-
 fish_add_path /usr/local/go/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path /opt/gradle/gradle-6.6.1/bin

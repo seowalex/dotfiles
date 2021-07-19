@@ -17,11 +17,14 @@
 
 - link:
     ~/.config/fish/conf.d/config-ubuntu-18.04.fish:
-        if: set -q WSL_DISTRO_NAME; and string match -q -e 'Ubuntu 18.04' (lsb_release -ds)
+        if: string match -q -e 'Ubuntu 18.04' (lsb_release -ds)
         path: ubuntu/18.04/config.fish
     ~/.config/fish/conf.d/config-ubuntu-20.04.fish:
-        if: set -q WSL_DISTRO_NAME; and string match -q -e 'Ubuntu 20.04' (lsb_release -ds)
+        if: string match -q -e 'Ubuntu 20.04' (lsb_release -ds)
         path: ubuntu/20.04/config.fish
+    ~/.config/fish/conf.d/config-wsl.fish:
+        if: set -q WSL_DISTRO_NAME
+        path: wsl/config.fish
     ~/.config/fish/functions/hpc.fish:
     ~/.config/fish/functions/ocs.fish:
         if: set -q WSL_DISTRO_NAME; and string match -q -e 'Ubuntu 18.04' (lsb_release -ds)
