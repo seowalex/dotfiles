@@ -8,4 +8,5 @@ fish_add_path $HOME/.cargo/bin
 
 bass source /usr/share/gazebo-9/setup.sh
 bass source /opt/ros/melodic/setup.bash
+source /opt/ros/melodic/share/rosbash/rosfish
 bass source $HOME/bumblebee/ros/devel/setup.bash
